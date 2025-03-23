@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <label class="share-btn" for="popup-1">Share</label>
+    <input type="checkbox" id="popup-1" class="popup-toggle">
+    <div class="popup">
+        <div class="popup-inner share-popup">
+            <label for="popup-1" class="popup-close">
+                <img src="img/cross.png">
+            </label>
+            <h4>Share this design</h4>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/facebook.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/youtube (1).png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/twitter.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/pinterest.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/spotify (1).png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/instagram.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <h6>or copy link</h6>
+            <div class="input">
+                <input type="text" readonly id="input-url" value="https://open.spotify.com/">
+                <div class="copy-alert">Kopyalandı!</div>
+                <button type="button" id="copyButton">Copy</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

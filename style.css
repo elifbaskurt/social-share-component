@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Mulish', sans-serif;
+}
+
+*:focus {
+    outline: 0;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:grey;
+    z-index: 10; /*yukarıda kalmasını istediğim için böyle diyorum*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.popup-toggle {
+    display: none;
+}
+.popup-toggle:checked + .popup {
+    opacity: 1;
+    visibility: visible;
+}
+.share-popup {
+    width: 808px;
+    padding: 55px 78px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.share-popup .popup-close {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: #F7F7FC;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 300ms background-color;
+}
+.share-popup .popup-close img {
+    height: 15px;
+}
+.share-popup .popup-close:hover {
+    background: darken(#F7F7FC, 5%);
+}
+.popup-inner {
+    position: relative;
+}
+.share-popup h4 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #242E4C;
+    margin-bottom: 40px;
+}
+.share-popup ul {
+    display: flex;
+    margin-bottom: 40px;
+}
+.share-popup ul li {
+    flex: 1;
+    text-align: center;
+}  
+
+.share-popup ul li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border: 1px solid #EBEBF2;
+    transition: 300ms border-color ease-in;
+}
+.share-popup ul li a:hover {
+    border-color: #F775C1;
+}
+.share-popup ul li a img {
+    height: 40px;
+}
+.share-popup h6 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #242E4C;
+    margin-bottom: 10px;
+}
+.share-popup .input {
+    position: relative;
+}
+.share-popup .input input {
+    height: 57px;
+    border: 1px solid #EBEBF2;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 16px; 
+    color: #242E4C ;
+    cursor: pointer;
+}
+.share-popup .input button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 57px;
+    padding: 0 20px;
+    line-height: 57px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #F775C1;
+    background: transparent;
+    cursor: pointer;
+}
+.popup .share-popup ul li a img {
+    height: 35px;
+   
+}
+.share-btn {
+    font-size: 24px;
+    font-weight: bold;
+    color: #242E4C;
+    background: #F775C1;
+    border-radius: 5px;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: 300ms background-color ease-in;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
+.share-btn:hover {
+    background: darken(#F775C1, 5%);
+}
+
+/* Kopyalandı mesajı için yeni stil */
+.copy-alert {
+    position: absolute;
+    background: #242E4C;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    top: -40px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.copy-alert.show {
+    opacity: 1;
+    visibility: visible;
+}
