@@ -15,7 +15,6 @@ A lightweight, customizable React component that provides a clean modal interfac
   - Instagram
 - Copy to clipboard functionality
 - Visual feedback upon successful copy ("Kopyalandı!")
-- Responsive design that works on all devices
 - Clean, modern UI
 
 ## Installation
